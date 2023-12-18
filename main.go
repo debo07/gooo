@@ -7,12 +7,12 @@ func main() {
 	fmt.Println(card)
 
 	// Slice - Defining a slice of type string
-	cardList := []string{"Ace of Diamonds", newCard()}
+	cardList := deck{"Ace of Diamonds", newCard()}
 	// Appending a new element to the slice
 	cardList = append(cardList, "Six of Spades")
 
 	// Iterate over the slice
-	for _, card := range cardList {
-		fmt.Println( card )
+	for i, card := range cardList {
+		fmt.Println( i, card )
 	}
 }
