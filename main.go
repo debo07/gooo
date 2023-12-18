@@ -12,7 +12,7 @@ func main() {
 	cardList = append(cardList, "Six of Spades")
 
 	// Iterate over the slice
-	for i, card := range cardList {
-		fmt.Println(i, card)
+	for _, card := range cardList {
+		fmt.Println( card )
 	}
 }
