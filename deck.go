@@ -8,7 +8,7 @@ import "fmt"
 type deck []string
 
 // Create a new function that returns a deck
-func newDec() deck {
+func newDeck() deck {
 	cards := deck{}
 	cardSuites := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
 	cardValues := []string{"Ace", "Two", "Three", "Four"}
@@ -25,4 +25,8 @@ func (d deck) print() {
 	for i, card := range d {
 		fmt.Println( i, card )
 	}
+}
+
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }

@@ -2,8 +2,10 @@ package main
 
 func main() {
 	// Create a new deck
-	cardList := newDec()
+	cardList := newDeck()
 
-	// Iterate over the slice
-	cardList.print()
+	hand, remainingDeck := deal(cardList, 5)
+
+	hand.print()
+	remainingDeck.print()
 }
