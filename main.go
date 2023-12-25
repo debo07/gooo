@@ -5,6 +5,8 @@ import "fmt"
 func main() {
 	// Create a new deck
 	cardList := newDeck()
+	fmt.Println("----------- Original Deck -----------")
+	cardList.print()
 
 	hand, remainingDeck := deal(cardList, 5)
 
@@ -21,4 +23,9 @@ func main() {
 	deckFromFile := getDeckFromFile("hand.txt")
 	fmt.Println("----------- Deck from file -----------")
 	deckFromFile.print()
+
+	// Shuffle a deck and print
+	cardList.shuffle()
+	fmt.Println("----------- Deck after Shuffling -----------")
+	cardList.print()
 }
